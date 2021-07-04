@@ -17,3 +17,4 @@ git clone https://github.com/tty228/luci-app-serverchan openwrt/package/luci-app
 git clone https://github.com/destan19/OpenAppFilter openwrt/package/OpenAppFilter
 rm -rf openwrt/package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon openwrt/package/lean/luci-theme-argon
+sed -i 's/bootstrap/argon/g' openwrt/feeds/luci/collections/luci/makefile
