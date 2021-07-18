@@ -71,6 +71,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
     - name: Configuration Customization - Build_Newifi_D2
       env:
         CONFIG_FILE: 'Newifi_D2.config'
