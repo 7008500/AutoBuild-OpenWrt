@@ -71,7 +71,7 @@ jobs:
         make download -j$(nproc)
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        sed -i 's/sctapi.ftqq.com/sc.ftqq.com/g' openwrt/build_dir/target-mipsel_24kc_musl/luci-app-serverchan/root/usr/bin/serverchan/api
+        sed -i 's/sctapi.ftqq.com/sc.ftqq.com/g' openwrt/build_dir/target-mipsel_24kc_musl/luci-app-serverchan/root/usr/bin/serverchan/api/serverchan.json
     - name: Build firmware
       working-directory: ./openwrt
       run: |
