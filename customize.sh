@@ -14,3 +14,4 @@ sed -i 's/15744k/32448k/g' openwrt/target/linux/ramips/image/mt7621.mk
 sed -i 's/sctapi.ftqq.com/sc.ftqq.com/g' openwrt/feeds/luci/applications/luci-app-serverchan/root/usr/bin/serverchan/api/serverchan.json
 rm -rf openwrt/feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/7008500/luci-theme-argon openwrt/package/lean/luci-theme-argon
+git clone https://github.com/brvphoenix/luci-app-wrtbwmon.git openwrt/package
