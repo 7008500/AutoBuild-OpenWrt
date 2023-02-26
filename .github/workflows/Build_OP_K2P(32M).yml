@@ -57,6 +57,7 @@ jobs:
         sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
         ./scripts/feeds install -a
         ./scripts/feeds install -a
+        ./scripts/feeds install vsftpd openssh-sftp-server
     - name: Configuration Customization - Build_K2P(32M)
       env:
         CONFIG_FILE: 'K2P(32M).config'
