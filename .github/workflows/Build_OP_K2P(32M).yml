@@ -60,7 +60,6 @@ jobs:
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
-        sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
         ./scripts/feeds install -a
         ./scripts/feeds install -a
     - name: Configuration Customization - Build_K2P(32M)
