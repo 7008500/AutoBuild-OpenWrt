@@ -52,10 +52,10 @@ jobs:
         REPO_URL: https://github.com/immortalwrt/immortalwrt
         REPO_BRANCH: master
       run: |
-        git clone -b $REPO_BRANCH --single-branch --filter=blob:none $REPO_URL immortalwrt
+        git clone -b $REPO_BRANCH --single-branch --filter=blob:none $REPO_URL openwrt
         cd immortalwrt
     - name: Update & Install feeds
-      working-directory: ./immortalwrt
+      working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
@@ -75,12 +75,12 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
     - name: Build firmware
-      working-directory: ./immortalwrt
+      working-directory: ./openwrt
       run: |
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: immortalwrt
-        path: immortalwrt/bin
+        name: openwrt
+        path: openwrt/bin
