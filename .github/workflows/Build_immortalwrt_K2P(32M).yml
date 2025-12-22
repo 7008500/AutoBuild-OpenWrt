@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_imm_K2P(32M)
+name: Build_immortalwrt_K2P(32M)
 
 # Add a button to trigger the workflow
 on: 
@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-    name: 🚀 编译 (Build)
+    name: 
     runs-on: ubuntu-latest
     
     steps:
