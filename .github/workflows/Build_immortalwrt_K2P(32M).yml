@@ -56,7 +56,6 @@ jobs:
           repository: '${{inputs.owner}}/${{inputs.repo}}'
           ref: ${{inputs.branch}}
           path: openwrt
-        cd openwrt
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
