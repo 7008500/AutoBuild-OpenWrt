@@ -20,7 +20,6 @@ on:
         required: true
         default: 'master'
 
-jobs:
     name: Build_immortalwrt_K2P(32M)
     runs-on: ubuntu-latest
     
