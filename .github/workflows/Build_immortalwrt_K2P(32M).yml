@@ -2,7 +2,6 @@ name: Build_immortalwrt_K2P(32M)
 
 # Add a button to trigger the workflow
 on:
-  workflow_dispatch:
     inputs:
       owner:
         description: 'ImmortalWrt 仓库的拥有者 (Owner of ImmortalWrt repo)'
