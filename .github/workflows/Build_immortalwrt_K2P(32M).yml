@@ -21,7 +21,6 @@ on:
         default: 'master'
 
 jobs:
-  build:
     name: Build_immortalwrt_K2P(32M)
     runs-on: ubuntu-latest
     
