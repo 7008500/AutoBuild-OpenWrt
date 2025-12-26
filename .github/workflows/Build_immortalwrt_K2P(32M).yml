@@ -51,7 +51,7 @@ jobs:
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/immortalwrt/immortalwrt
-        REPO_BRANCH: v24.10.4
+        REPO_BRANCH: v18.06-k5.4
       run: |
         git clone -b $REPO_BRANCH --single-branch --filter=blob:none $REPO_URL openwrt
         cd openwrt
