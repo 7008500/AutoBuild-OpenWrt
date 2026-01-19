@@ -11,6 +11,4 @@ sed -i 's/192.168./10.0./g' openwrt/package/base-files/files/bin/config_generate
 sed -i '/spi-max-frequency/a\\t\tbroken-flash-reset;' openwrt/target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 sed -i 's/0xf60000/0x1f60000/g' openwrt/target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 sed -i 's/15744k/32448k/g' openwrt/target/linux/ramips/image/mt7621.mk
-cd openwrt/package/lean  
-rm -rf luci-theme-argon 
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+
