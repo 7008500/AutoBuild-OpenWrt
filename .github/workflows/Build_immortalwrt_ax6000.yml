@@ -50,7 +50,7 @@ jobs:
           
     - name: Clone source code
       env: 
-        REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
+        REPO_URL: https://github.com/7008500/immortalwrt-mt798x-6.6
         REPO_BRANCH: openwrt-24.10-6.6
       run: |
         git clone -b $REPO_BRANCH --single-branch --filter=blob:none $REPO_URL openwrt
@@ -60,6 +60,7 @@ jobs:
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+        cp -f defconfig/mt7986-ax6000.config .config
 
     - name: Configuration Customization - Build_ax6000
       env:
